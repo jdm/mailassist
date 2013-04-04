@@ -1,0 +1,10 @@
+[mailassist]
+imap=imap.gmail.com
+imap_port=993
+smtp=smtp.gmail.com
+smtp_port=587
+username=mozilla@gmail.com
+password=p4ssw0rd
+sender=response@mozilla.org
+mailbox=inbox
+language=en-US
