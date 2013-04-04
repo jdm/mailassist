@@ -263,18 +263,19 @@ for num in messages[0].split(' '):
     if keep:
         continue
 
+    sender = config.get('mailassist', 'sender')
     if reply:
         print ''
         print 'Sending reply:'
         print reply
-        msg = "From: %s\r\nTo: %s\r\nCC: %s\r\nSubject: %s\r\n\r\n%s" % ("josh@joshmatthews.net", destination, maillist, "Re: " + subject, reply)
-        server.sendmail('josh@joshmatthews.net', [destination, maillist], msg)
+        msg = "From: %s\r\nTo: %s\r\nCC: %s\r\nSubject: %s\r\n\r\n%s" % (sender, destination, maillist, "Re: " + subject, reply)
+        server.sendmail(sender, [destination, maillist], msg)
 
     if actions['forward']:
         print ''
         print 'Forwarding...'
-        msg = "From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%s" % ("josh@joshmatthews.net", ','.join(actions['forward']), subject, payload)
-        server.sendmail('josh@joshmatthews.net', actions['forward'], msg)
+        msg = "From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%s" % (sender, ','.join(actions['forward']), subject, payload)
+        server.sendmail(sender, actions['forward'], msg)
 
     if reply or actions['forward'] or skip:
         print 'Marking as read...'
