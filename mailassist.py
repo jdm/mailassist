@@ -58,7 +58,7 @@ Josh""",
 
     'b2g': baseHeader + 'If you want to learn more about contributing to Firefox OS, have a look at https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS.' + baseFooter,
 
-    'webapps': """Hi,
+    'webapp': """Hi,
 I'm Josh, one of many Firefox developers. Glad to hear from you! To learn about Firefox OS app development, have a look at https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Writing_a_web_app_for_B2G .""" + baseFooter,
 
     'base': baseHeader + baseFooter,
@@ -68,6 +68,16 @@ I'm Josh, one of many Firefox developers. Glad to hear from you! To learn more a
 
 Cheers,
 Josh""",
+
+    'support': """I'm sorry to hear about some of the issues you are running into with Firefox. Perhaps we can help solve your problem with a simple fix.
+
+I suggest asking about this on our Firefox support site at
+
+http://support.mozilla.com/kb/ask
+
+Please be specific and also post any error messages if available and/or a crash ID so that we can have a more complete understanding of the issue.
+
+Thanks, we're here to help."""
 }
 
 def forwardMessage(actions, destination):
@@ -118,6 +128,7 @@ filters = {
     'intern': makeAutoreply('intern'),
 
     'firefox os': makeAutoreply('b2g'),
+    'firefoxos': makeAutoreply('b2g'),
 
     'webapp': makeAutoreply('webapp'),
     'app': makeAutoreply('webapp'),
@@ -138,14 +149,23 @@ filters = {
 
     'spanish': makeForwarder('hispano'),
 
+    'translation': makeForwarder('l10n'),
     'translating': makeForwarder('l10n'),
-    'translatte': makeForwarder('l10n'),
+    'translate': makeForwarder('l10n'),
     'localize': makeForwarder('l10n'),
+    'localise': makeForwarder('l10n'),
     'localizing': makeForwarder('l10n'),
+    'localising': makeForwarder('l10n'),
+    'localization': makeForwarder('l10n'),
+    'localisation': makeForwarder('l10n'),
 
     'addon': makeForwarder('addons'),
     'add-on': makeForwarder('addons'),
     'extension': makeForwarder('addons'),
+
+    'writing': makeForwarder('docs'),
+    'documentation': makeForwarder('docs'),
+    'docs': makeForwarder('docs'),
 }
 
 server = smtplib.SMTP(config.get('mailassist', 'smtp'), config.get('mailassist', 'smtp_port'))
@@ -235,17 +255,17 @@ for num in messages[0].split(' '):
             print 'Adding forward:', x[1]
             continue
         elif x[0] == '.edit':
-            default = ['base'] if len(x) == 1 else x[[1]:]
+            default = ['base'] if len(x) == 1 else x[1:]
             print 'Entering editor...'
-            with tempfile.NamedTemporaryFile(suffix=".tmp") as tempfile:
-                tempfile.write(comment + '\n' + '-' * 10 + '\n' + '\n'.join(map(lambda x: responses[x], default)))
-                tempfile.flush()
-                call([EDITOR, tempfile.name])
-                tempfile.flush()
-                tempfile.seek(0)
-                contents = tempfile.readlines()
-                print contents
+            with tempfile.NamedTemporaryFile(suffix=".tmp") as f:
+                f.write(comment + '\n' + '-' * 10 + '\n' + '\n'.join(map(lambda x: responses[x], default)))
+                f.flush()
+                call([EDITOR, f.name])
+                f.flush()
+                f.seek(0)
+                contents = f.readlines()
                 reply = ''.join(contents[contents.index('-'*10+'\r\n') + 1 :])
+                break
         elif x[0] in responses:
             reply = responses[x[0]]
             break
