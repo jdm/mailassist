@@ -77,7 +77,12 @@ http://support.mozilla.com/kb/ask
 
 Please be specific and also post any error messages if available and/or a crash ID so that we can have a more complete understanding of the issue.
 
-Thanks, we're here to help."""
+Thanks, we're here to help.""",
+
+    'hispano': """Please visit http://www.mozilla.org/es-ES/contribute/ for more information.
+
+Cheers,
+Josh"""
 }
 
 def forwardMessage(actions, destination):
@@ -93,8 +98,7 @@ handlers = {
     'marketing': 'cnovak@mozilla.com',
     'design': 'matej@mozilla.com',
     'qa': 'marcia@mozilla.com',
-    'france': 'contact@mozfr.org',
-    'hispano': 'participa@mozilla-hispano.org'
+    'france': 'contact@mozfr.org'
 }
 
 def makeForwarder(contact):
@@ -147,7 +151,7 @@ filters = {
 
     'marketing': makeForwarder('marketing'),
 
-    'spanish': makeForwarder('hispano'),
+    'spanish': makeAutoreply('hispano'),
 
     'translation': makeForwarder('l10n'),
     'translating': makeForwarder('l10n'),
@@ -194,7 +198,6 @@ for num in messages[0].split(' '):
             print 'Error marking message as read:', ret, data
         continue
 
-    subject = msg['Subject']
     if destination in seen:
         print 'Skipping duplicate message'
         ret, data = mail.store(num,'+FLAGS','\\Seen')
@@ -202,7 +205,10 @@ for num in messages[0].split(' '):
             print 'Error marking message as read:', ret, data
         continue
 
+    subject = msg['Subject']
     payload = msg.get_payload(decode=True)
+    if not payload:
+        print msg
     if not language in payload:
         print 'Skipping non-English message'
         ret, data = mail.store(num,'+FLAGS','\\Seen')
