@@ -1,0 +1,88 @@
+                                                                                                                                                                                                                                                               
+Delivered-To: mrlachatte@gmail.com
+Received: by 10.194.28.195 with SMTP id d3csp105285wjh;
+        Tue, 28 May 2013 08:20:25 -0700 (PDT)
+X-Received: by 10.68.20.193 with SMTP id p1mr34716566pbe.218.1369754424848;
+        Tue, 28 May 2013 08:20:24 -0700 (PDT)
+Return-Path: <joshmatthews.net@forward.nearlyfreespeech.net>
+Received: from mx-fwd-1.nearlyfreespeech.net (mail-fwd-1.nearlyfreespeech.net. [208.94.116.196])
+        by mx.google.com with ESMTP id hb2si23860579pac.118.2013.05.28.08.20.24
+        for <mrlachatte@gmail.com>;
+        Tue, 28 May 2013 08:20:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of joshmatthews.net@forward.nearlyfreespeech.net designates 208.94.116.196 as permitted sender) client-ip=208.94.116.196;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of joshmatthews.net@forward.nearlyfreespeech.net designates 208.94.116.196 as permitted sender) smtp.mail=joshmatthews.net@forward.nearlyfreespeech.net
+Received: from b1 (localhost.nearlyfreespeech.net [127.0.0.1])
+	by mx-fwd-1.nearlyfreespeech.net (Postfix) with ESMTP id 110C317169
+	for <josh@joshmatthews.net>; Tue, 28 May 2013 15:20:24 +0000 (UTC)
+X-NFSN-Original-Sender: contribute-bounces@mozilla.org
+X-Virus-Scanned: amavisd-new at NearlyFreeSpeech.NET
+Received: from mx-fwd-1.nearlyfreespeech.net ([127.0.0.1])
+	by b1 (forward.nearlyfreespeech.net [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id XhE77GGFiNmC for <josh@joshmatthews.net>;
+	Tue, 28 May 2013 15:20:23 +0000 (UTC)
+Received: from mail.mozilla.org (mailman1.corp.phx1.mozilla.com [63.245.216.65])
+	by mx-fwd-1.nearlyfreespeech.net (Postfix) with ESMTP
+	for <josh@joshmatthews.net>; Tue, 28 May 2013 15:20:23 +0000 (UTC)
+Received: from mailman1.mail.corp.phx1.mozilla.com (localhost6.localdomain [127.0.0.1])
+	by mailman1.mail.corp.phx1.mozilla.com (Postfix) with ESMTP id 1F9A2F22FE
+	for <josh@joshmatthews.net>; Tue, 28 May 2013 08:20:24 -0700 (PDT)
+X-Original-To: contribute@mozilla.org
+Delivered-To: contribute@mailman1.mail.corp.phx1.mozilla.com
+Received: from smtp.mozilla.org (mx2.mail.corp.phx1.mozilla.com [10.20.77.62])
+	by mailman1.mail.corp.phx1.mozilla.com (Postfix) with ESMTP id
+	E072FF22FE
+	for <contribute@mozilla.org>; Tue, 28 May 2013 08:20:22 -0700 (PDT)
+X-Virus-Scanned: amavisd-new at mozilla.org
+Received: from bedrock2.webapp.phx1.mozilla.com (webheads81.phx.mozilla.com
+	[63.245.216.223])
+	by mx2.mail.corp.phx1.mozilla.com (Postfix) with ESMTP id C4A63F22B4
+	for <contribute@mozilla.org>; Tue, 28 May 2013 08:20:21 -0700 (PDT)
+Received: by bedrock2.webapp.phx1.mozilla.com (Postfix, from userid 48)
+	id 3120A16035E; Tue, 28 May 2013 08:20:22 -0700 (PDT)
+To: contribute@mozilla.org
+X-PHP-Originating-Script: 0:ContributeForm.php
+From: <contribute-form@mozilla.org>
+Message-Id: <20130528152022.3120A16035E@bedrock2.webapp.phx1.mozilla.com>
+Date: Tue, 28 May 2013 08:20:22 -0700 (PDT)
+Subject: [Contribute] Inquiry about Mozilla Coding
+X-BeenThere: contribute@mozilla.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+Reply-To: divadson@gmail.com
+List-Id: <contribute.mozilla.org>
+List-Unsubscribe: <https://mail.mozilla.org/options/contribute>,
+	<mailto:contribute-request@mozilla.org?subject=unsubscribe>
+List-Archive: <https://mail.mozilla.org/private/contribute/>
+List-Post: <mailto:contribute@mozilla.org>
+List-Help: <mailto:contribute-request@mozilla.org?subject=help>
+List-Subscribe: <https://mail.mozilla.org/listinfo/contribute>,
+	<mailto:contribute-request@mozilla.org?subject=subscribe>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4428165519084394526=="
+Errors-To: contribute-bounces@mozilla.org
+Sender: contribute-bounces@mozilla.org
+
+--===============4428165519084394526==
+Content-Type: text/plain
+
+E-mail: divadson@gmail.com
+Area of Interest: Coding
+Comment: Hi, I listened about your group of developers, and I´m interested to involve in the group. 
+I´m getting involved about all of it, so i´ll hope to be able to be part..
+
+David
+
+
+--===============4428165519084394526==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Contribute mailing list
+Contribute@mozilla.org
+https://mail.mozilla.org/listinfo/contribute
+
+--===============4428165519084394526==--
